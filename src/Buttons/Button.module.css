@@ -41,3 +41,10 @@
     font-size: 0.75rem;
   }
 }
+@media (max-width: 440px) {
+  .button {
+    width: calc(3.5rem + 1vw);
+    height: 2rem;
+    font-size: 0.5rem;
+  }
+}

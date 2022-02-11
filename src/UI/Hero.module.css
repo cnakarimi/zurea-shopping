@@ -70,13 +70,16 @@
   }
   .title {
     font-size: 3rem;
+    padding-right: 5rem;
   }
   .paragraph {
     font-size: 1.5rem;
+    padding-right: 5rem;
     margin-bottom: 1rem;
   }
   .hero-button {
     margin-bottom: 2rem;
+    margin-right: 5rem;
   }
 }
 
@@ -91,4 +94,22 @@
   .right-arrow {
     font-size: 2rem;
   }
-} ;
+}
+
+@media (max-width: 440px) {
+  .left-arrow,
+  .right-arrow {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.5rem;
+    padding-right: 4rem;
+  }
+  .paragraph {
+    font-size: 0.8rem;
+    padding-right: 4rem;
+  }
+  .hero-button {
+    margin-right: 4rem;
+  }
+}

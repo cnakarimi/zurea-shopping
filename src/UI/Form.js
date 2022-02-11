@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import Input from "./Input";
 import classes from "./Form.module.css";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Form = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);

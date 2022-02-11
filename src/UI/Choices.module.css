@@ -41,3 +41,11 @@
     font-size: 1.1rem;
   }
 }
+@media (max-width: 440px) {
+  .choices {
+    width: 300px;
+  }
+  .choice-button {
+    font-size: 0.7rem;
+  }
+} ;

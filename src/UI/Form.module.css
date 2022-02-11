@@ -31,3 +31,13 @@
 .addbutton:hover {
   border: 3px solid var(--fifth-color);
 }
+@media (max-width: 650px) {
+  .addbutton {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 440px) {
+  .addbutton {
+    font-size: 1rem;
+  }
+}

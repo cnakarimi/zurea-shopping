@@ -1,9 +1,10 @@
+/* Cards-class */
+
 .category {
   margin-top: 6rem;
   display: flex;
   justify-content: space-between;
 }
-
 .cards {
   width: 33%;
   height: 250px;
@@ -63,6 +64,9 @@ img {
   .details {
     font-size: 2rem;
   }
+  .cards {
+    height: 100px;
+  }
 }
 @media (max-width: 575px) {
   .details {
@@ -71,5 +75,14 @@ img {
   img {
     width: 75px;
     height: 75px;
+  }
+}
+@media (max-width: 440px) {
+  .details {
+    font-size: 1rem;
+  }
+  img {
+    width: 50px;
+    height: 50px;
   }
 }

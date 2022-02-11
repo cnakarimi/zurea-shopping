@@ -8,7 +8,7 @@ const Category = () => {
   return (
     <Card>
       <section className={classes.category}>
-        <div className={classes.cards}>
+        <li className={classes.cards}>
           <span className={classes.cardimg}>
             <img src={bag} alt="white bag" />
           </span>
@@ -16,8 +16,8 @@ const Category = () => {
             Designer Bags
             <Button />
           </p>
-        </div>
-        <div className={classes.cards}>
+        </li>
+        <li className={classes.cards}>
           <span className={classes.cardimg}>
             <img src={watch} alt="black watch" />
           </span>
@@ -25,8 +25,8 @@ const Category = () => {
             Branded Watch
             <Button />
           </p>
-        </div>
-        <div className={classes.cards}>
+        </li>
+        <li className={classes.cards}>
           <span className={classes.cardimg}>
             <img src={shoes} alt="white shoes" />
           </span>
@@ -34,7 +34,7 @@ const Category = () => {
             Casual Shoes
             <Button />
           </p>
-        </div>
+        </li>
       </section>
     </Card>
   );

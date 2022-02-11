@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Classes from "./App.module.css";
 import Header from "./UI/Header";
 import Cart from "./Cart/Cart";
@@ -29,29 +30,31 @@ function App() {
   };
 
   return (
-    <CartProvider>
-      <Suspense fallback={<Loading></Loading>}>
-        <div className={Classes["st-bg"]}>
-          <div
-            className={
-              darkMode
-                ? `${classes["container-dark"]}`
-                : `${classes["container-light"]}`
-            }
-          >
-            {cartIsShown && <Cart onHide={hideCartHandler} />}
-            <Header onShow={showCartHandler} onMode={modeChanger} />
-            <Routes>
-              <Route path="/" element={<MainPage />}></Route>
-              <Route path="/shoes-page" element={<ShoesPage />}></Route>
-              <Route path="/bags-page" element={<BagsPage />}></Route>
-              <Route path="/watches-page" element={<WatchesPage />}></Route>
-              <Route path="*" element={<NotFound />}></Route>
-            </Routes>
+    <BrowserRouter>
+      <CartProvider>
+        <Suspense fallback={<Loading></Loading>}>
+          <div className={Classes["st-bg"]}>
+            <div
+              className={
+                darkMode
+                  ? `${classes["container-dark"]}`
+                  : `${classes["container-light"]}`
+              }
+            >
+              {cartIsShown && <Cart onHide={hideCartHandler} />}
+              <Header onShow={showCartHandler} onMode={modeChanger} />
+              <Routes>
+                <Route path="/" element={<MainPage />}></Route>
+                <Route path="/shoes-page" element={<ShoesPage />}></Route>
+                <Route path="/bags-page" element={<BagsPage />}></Route>
+                <Route path="/watches-page" element={<WatchesPage />}></Route>
+                <Route path="*" element={<NotFound />}></Route>
+              </Routes>
+            </div>
           </div>
-        </div>
-      </Suspense>
-    </CartProvider>
+        </Suspense>
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 
